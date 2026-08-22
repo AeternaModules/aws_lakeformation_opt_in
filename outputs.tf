@@ -1,7 +1,3 @@
-output "lakeformation_opt_ins_id" {
-  description = "Map of id values across all lakeformation_opt_ins, keyed the same as var.lakeformation_opt_ins"
-  value       = { for k, v in aws_lakeformation_opt_in.lakeformation_opt_ins : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "lakeformation_opt_ins_condition" {
   description = "Map of condition values across all lakeformation_opt_ins, keyed the same as var.lakeformation_opt_ins"
   value       = { for k, v in aws_lakeformation_opt_in.lakeformation_opt_ins : k => v.condition if v.condition != null && length(v.condition) > 0 }
